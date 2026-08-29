@@ -1,7 +1,9 @@
-//your JS code here. If required.
-let statusElem = document.getElementById("status");
-let btnElem = document.getElementById("enterBtn");
+const statusEl = document.getElementById('status');
+const enterBtn = document.getElementById('enterBtn');
 
-btnElem.addEventListener("click", ()=>{
-	statusElem.outerHTML = "<h1>Entered Metaverse</h1>"
-})
+enterBtn.addEventListener('click', () => {
+  const heading = document.createElement('h1');
+  heading.id = 'status';
+  heading.textContent = 'Entered Metaverse';
+  statusEl.replaceWith(heading);
+});
